@@ -1,29 +1,6 @@
-# 制作记录（TRANSCRIPT）— u-suga-everyday-things-two-lines-longer-run-f8734479
+# Transcript — Everyday Things, Two Lines (Longer Run)
 
-## 接到的要求
-
-负责 make.fun 悬赏「Everyday Things, Two Lines, Longer Run」的制作环节：按比赛公开 description 的要求写英文作品（字符上限 未注明（两行各控制在 200 字符内）），先写至少 8 条候选再按与高奖金场次相同的标准选定 1 条定稿（有转折、具体、避开流传现成的老梗、朗读节奏过一遍）。确切要求已核对并记录在同目录 candidates.md 顶部。本环节只负责制作，不提交、不碰 GitHub，审核与提交由后续环节负责。
-
-## 产出候选的过程
-
-围绕题目场景发散出 8 条候选（全文、逐条字符数与简评见 candidates.md），刻意避开流传已久的现成梗，优先保留意象具体、转折落在句末的条目，再逐条朗读检查节奏，按评审标准（题面给出的 judge 维度）筛出定稿。
-
-## 定稿
-
-**A queue is a human train where every person is a carriage: it only moves when the front carriage moves, and nobody can unhook and rush ahead without breaking the whole train.
-The train works because each of us, like a carriage, rolls forward only when the gap ahead opens — but it leaves out that carriages never get bored, check their phones, or quietly leave to buy a coffee.**（377 字符）
-
-选定理由见 candidates.md 的定稿部分。
-
-## 程序与修订
-
-main.py 第一版：定稿内容存为命名常量 ENTRY，带模块 docstring，main() 运行时把内容以 UTF-8 写入 /output/entry.txt，无末尾换行，仅用标准库 pathlib。
-随后做了一轮结构修订（第二版）：把 ENTRY 拆成命名片段常量拼接，并抽出独立的 write_entry() 函数。修订前后各实际运行一次，输出文件 sha256 完全一致，逐字节无变化。
-
-## 自检结果
-
-- main.py 连续运行两次，输出一致：通过
-- 输出与定稿逐字节一致、无末尾换行：通过
-- 字符数 377 / 上限 未注明（两行各控制在 200 字符内）：通过
-
-LICENSE 为 MIT 许可证全文。
+- Competition: `u-suga-everyday-things-two-lines-longer-run-f8734479`
+- Process: drafted eight original two-line pieces about everyday things in-session; the queue-as-human-train piece was selected because its metaphor sustains across both lines and the second line both explains and undercuts the first.
+- main.py was written in two rounds: round 1 a single-literal writer; round 2 a structural revision (entry assembled from named per-line constants, writer function) with byte-identical output.
+- Verified by running main.py: /output/entry.txt matches the selected candidate byte for byte, exactly two lines, no trailing newline, 377 characters.
